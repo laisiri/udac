@@ -37,8 +37,53 @@ const musicData = [
     { artist: 'Rihanna', name: 'Anti', sales: 603000 },
     { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
 ];
+/* Using map()
+ *
+ * Using the musicData array and map():
+ *   - Return a string for each item in the array in the following format:
+ *     <album-name> by <artist> sold <sales> copies
+ *   - Store the returned data in a new albumSalesStrings variable
+ *
+ * Note:
+ *   - Do not delete the musicData variable
+ *   - Do not alter any of the musicData content
+ *   - Do not format the sales number; leave it as a long string of digits
+ */
+
+//map() take all elements in array and return result with new array
 
 let albumSalesStrings = musicData.map((e) => {
     return e.name + " by " + e.artist + " sold " + e.sales + " copies";
 });
 console.log(albumSalesStrings);
+/* Array's filter() method is similar to the map() method:
+
+It is called on an array
+It takes a function as an argument
+It returns a new array
+
+he difference is that the function passed to filter() is used as a test, 
+and only items in the array that pass the test are included in the new array.
+*/
+
+/* Using filter()
+ *
+ * Using the musicData array and filter():
+ *   - Return only album objects where the album's name is
+ *     10 characters long, 25 characters long, or anywhere in between
+ *   - Store the returned data in a new `results` variable
+ *
+ * Note:
+ *   - Do not delete the musicData variable
+ *   - Do not alter any of the musicData content
+ */
+
+const results = musicData.filter((e) => {
+    if(e.name.length >= 10 && e.name.length <= 25 ){
+
+        return e;
+
+    }
+});
+
+console.log(results);
