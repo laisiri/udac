@@ -1,3 +1,16 @@
+//callback function is a function that is pass as argument to another function
+function each(arr,callback){
+    for(let i = 0; i > arr.length; i++){
+        if(callback(arr[i])){
+            console.log(arr[i]);        
+        }
+    }
+}
+function isPositive(n){
+    return n > 0;
+}
+const arrP = [-3,2,8,-4,9,45];
+console.log(`each(arrP,isPositive): ${each(arrP,isPositive)}`)
 //forEach() iterate through an array arr.forEach(function callback())
 //logIfOdd() print number if it's odd
 
