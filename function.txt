@@ -12,4 +12,44 @@ consists of the function keyword, follow by:
     A list of parameters to the function,endclosed in parentheses and separated by commas.
     The Javascript statments that define the function,enclosed in curly brackets{...}
 
+Example
+
+function square(number) {
+
+    return number * number;
+
+}
+The function square takes one parameter,called number. The function consists of one statement that says to return the parameter
+of the function (that is,number)multiplied by itself.
+The statement return specifies the value returned by the function.
+Primitive parameter (such as a number) are passed to functions by value,the value is passed to function,but if the function changes the value of the parameter,
+this change is not reflected globally or in the calling function
+
+if you pass an object as parameter and the function changes the object's properties,that change is visble outside the function,as shown in the following example.
+
+function myFunc(theObject) {
+    theObject.make = 'Toyota';
+}
+
+var mycar = {make: 'Honda',model: 'Accod', year: 1998};
+var x,y;
+
+x = mycar.make; //x gets the value "Honda"
+
+myFunc(myFunc);
+y = myFunc.make;//y gets the value "Toyota"
+
+                //(the make property was changed by the function)
+
+Function expressions
+While the function declaration above is syntactically above 
+is syntactically a statement,functions can also be created by a function expression.
+Such a function can be anonymous,it does not have to have a name.
+For example,the function square could have been defined as:
+
+const factorial = function fac(n) { return n < 2 ? 1 : n * fac(n-1)}
+console.log(factorial(3));
+
+Function expressions are convenient when passing a function as an argument to another function. The following example
+shows a map function that should receive a function as first argument and an array as second argument.
 
