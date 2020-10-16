@@ -1,5 +1,15 @@
 Function(MDN)
 The procesure to qualify as function,it should take some input and return and output
-where there is some obvious relationship between the input and output. To use a function,you must define 
-it somewhere in the scope from which you wish to call it.
-กระบวนการมีคุณสมบัติเหมือนฟังชั่นคือมันจะนำเข้าข้อมูลมาในฟังชั้่นและส่งออกข้อมูล ที่มีความสัมพันธ์กันระหว่างข้อมูลเข้าและการส่งออกข้อมูล
+where there is some obvious relationship between the input and output. To use a 
+function,you must define it somewhere in the scope from which you wish to call it.
+กระบวนการมีคุณสมบัติเหมือนฟังชั่นคือมันจะนำเข้าข้อมูลมาในฟังชั้่นและส่งออกข้อมูล ที่มีความสัมพันธ์กันระหว่าง
+ข้อมูลเข้าและการส่งออกข้อมูล 
+Function declaration
+A function definition(also called a function declaration,or function statement)
+consists of the function keyword, follow by:
+    
+    The name of the function
+    A list of parameters to the function,endclosed in parentheses and separated by commas.
+    The Javascript statments that define the function,enclosed in curly brackets{...}
+
+
