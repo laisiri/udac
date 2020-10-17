@@ -39,7 +39,7 @@ of the function (that is,number)multiplied by itself.
 The statement return specifies the value returned by the function.
 Primitive parameter (such as a number) are passed to functions by value,the value is passed to function,but if the function changes the value of the parameter,
 this change is not reflected globally or in the calling function
-ค่าพารามิเตอร์ที่ส่งเข้าไปในฟังชั่นเป็นค่าใดๆ ซื่งค่านี้ถ้าเกิดเปลี่ยนแปลงก็ไม่มีผลต่อค่าตัวแปรที่อยู่ภายนอกฟังชั่น
+ค่าพารามิเตอร์ที่ส่งเข้าไปในฟังชั่นถ้าเป็นค่าพื้นฐาน(Primitive value)ค่านี้ถ้าเกิดเปลี่ยนแปลงก็ไม่มีผลต่อค่าตัวแปรที่อยู่ภายนอกฟังชั่น
 
 if you pass an object as parameter and the function changes the object's properties,that change is visble outside the function,as shown in the following example.
 แต่ถ้าคุณผ่านค่าพารามิเตอร์ที่เป็นออบเจ็คเข้าไปในฟังชั่นแล้วเกิดการกระทำใดๆกับออบเจ็คนั้นทำให้ออบเจ็คนั้นเปลี่ยนแปลง จะมีผลต่อออบเจ็คนั้นภายนอกฟังชั่นด้วย ซี่งเรียกว่าการส่งค่าแบบอ้างอิง(pass by reference)
