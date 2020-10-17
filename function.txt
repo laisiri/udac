@@ -1,16 +1,27 @@
 Function(MDN)
-The procesure to qualify as function,it should take some input and return and output
+The procedure to qualify as function,it should take some input and return and output
 where there is some obvious relationship between the input and output. To use a 
 function,you must define it somewhere in the scope from which you wish to call it.
-กระบวนการมีคุณสมบัติเหมือนฟังชั่นคือมันจะนำเข้าข้อมูลมาในฟังชั้่นและส่งออกข้อมูล ที่มีความสัมพันธ์กันระหว่าง
-ข้อมูลเข้าและการส่งออกข้อมูล 
-Function declaration
-A function definition(also called a function declaration,or function statement)
+
+กระบวนการที่มีคุณสมบัติเหมือนฟังชั่นคือมันจะนำเข้าข้อมูลมาในฟังชั้่นและส่งข้อมูลกลับออกมาจากฟังชั่น 
+ที่มีความสัมพันธ์กันระหว่างข้อมูลเข้าและการส่งข้อมูลกลับออกมาจากฟังชั่น 
+
+Function declaration(การประกาศฟังชั่นหรือการสร้างฟังชั่น)
+    A function definition(also called a function declaration,or function statement)
 consists of the function keyword, follow by:
-    
+    การนิยามฟังชั่นหรือการประกาศฟังชั่นหรือเรียกอีกอย่างหนึ่งว่าวข้อความในการสร้างฟังชั่น(function statement)
+ประกอบด้วย คีย์เวิร์ดฟังชั่นตามด้วย    
+
     The name of the function
+    ชื่อของฟังชั่น
     A list of parameters to the function,endclosed in parentheses and separated by commas.
+    
+    ตามด้วยวงเล็บ ซึ่งในวงเล็บอาจมีหรือไม่มีค่าที่ส่งเข้าไปในฟังชั่นที่เรียกว่าพารามิเตอร์หรืออากิวเมนต์ซึ่งถ้ามีมากกว่า
+    หนึ่งตัวจะถูกแยกด้วยเครื่องหมายคอมม่า
+
     The Javascript statments that define the function,enclosed in curly brackets{...}
+    
+    ขั้นตอนการทำงานของฟังชั่นจะอยู่ในวงเล็บปีกกา
 
 Example
 
@@ -20,12 +31,18 @@ function square(number) {
 
 }
 The function square takes one parameter,called number. The function consists of one statement that says to return the parameter
+ฟังชั่น สแควมีพารามิเตอร์หนึ่งค่าชื่อว่านัมเบอร์ ข้างในฟังชั่นประกอบด้วยหนึ่งสเตทเม้นท์
+
 of the function (that is,number)multiplied by itself.
+คือการส่งค่ากลับออกมาจากฟังชั่น ด้วยค่าผลลัพธ์ของการคูณค่าของตัวแปรนัมเบอร์กับตัวมันเอง
+
 The statement return specifies the value returned by the function.
 Primitive parameter (such as a number) are passed to functions by value,the value is passed to function,but if the function changes the value of the parameter,
 this change is not reflected globally or in the calling function
+ค่าพารามิเตอร์ที่ส่งเข้าไปในฟังชั่นเป็นค่าใดๆ ซื่งค่านี้ถ้าเกิดเปลี่ยนแปลงก็ไม่มีผลต่อค่าตัวแปรที่อยู่ภายนอกฟังชั่น
 
 if you pass an object as parameter and the function changes the object's properties,that change is visble outside the function,as shown in the following example.
+แต่ถ้าคุณผ่านค่าพารามิเตอร์ที่เป็นออบเจ็คเข้าไปในฟังชั่นแล้วเกิดการกระทำใดๆกับออบเจ็คนั้นทำให้ออบเจ็คนั้นเปลี่ยนแปลง จะมีผลต่อออบเจ็คนั้นภายนอกฟังชั่นด้วย ซี่งเรียกว่าการส่งค่าแบบอ้างอิง(pass by reference)
 
 function myFunc(theObject) {
     theObject.make = 'Toyota';
@@ -42,8 +59,7 @@ y = myFunc.make;//y gets the value "Toyota"
                 //(the make property was changed by the function)
 
 Function expressions
-While the function declaration above is syntactically above 
-is syntactically a statement,functions can also be created by a function expression.
+While the function declaration above is syntactically a statement,functions can also be created by a function expression.
 Such a function can be anonymous,it does not have to have a name.
 For example,the function square could have been defined as:
 
